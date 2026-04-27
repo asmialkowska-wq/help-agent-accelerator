@@ -1,7 +1,7 @@
 # Inline Agentforce Chat — Accelerator Package
 
 Deploy an inline Agentforce chat experience — similar to [help.salesforce.com](https://help.salesforce.com) — on your own Experience Cloud site or third-party website. This package gives Salesforce customers and partners a ready-to-use starting point: UI components, a third-party embed script, and a pre-configured Agentforce agent, so you can go from zero to a working inline chat in minutes instead of hours.
-**[See it in action](https://salesforce.vidyard.com/watch/xox5QBfTWc2D2VeqLJ6aMi)**
+**<a href="https://salesforce.vidyard.com/watch/xox5QBfTWc2D2VeqLJ6aMi" target="_blank">See it in action</a>**
 
 ---
 
@@ -71,7 +71,7 @@ The package includes an optional pre-configured agent (`haaHelpAgent`). If you u
 
 ### Source deploy via Salesforce CLI
 
-**[Follow along with this setup video](https://salesforce.vidyard.com/watch/gqYPELEfErfLh5qkdd1aau)**
+**<a href="https://salesforce.vidyard.com/watch/gqYPELEfErfLh5qkdd1aau" target="_blank">Follow along with this setup video</a>**
 
 ```bash
 git clone <this-repo>
@@ -255,7 +255,8 @@ The agent is now ready to use in your messaging channel (created in Step 2 below
 | **Enable Debug Logs** | Optional | Logs state transitions and performance timing to the browser console |
 | **Show Canned Prompts** | Optional | Displays starter prompt buttons below the input. Labels are sourced from custom labels (see [Customization](#customization)) |
 
-4. **Save** and **Publish** the site
+4. Go to **Setup** → **CORS** and add the site URL for your sandbox and/or production.
+5. **Save** and **Publish** the site
 
 ### Step 3b — Embed on a third-party website
 
