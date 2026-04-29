@@ -239,7 +239,7 @@ The agent is now ready to use in your messaging channel (created in Step 2 below
 7. Fill out the details in the pop-up window:
    - **Channel Name** — e.g. "Inline Agentforce Chat"
    - **Developer Name** — auto-populated from Channel Name
-   - **Domain** — Enter the domain name for the entire website that will include the chat (e.g., yourcompany.com)
+   - ****Domain** — Enter the domain name for the entire website that will include the chat (e.g., yourcompany.com)**
    - **Fallback Queue** — Choose the queue you configured in step 2.2 above
 8. Click **Create Channel** — This process can take up to 10 minutes. Wait for the confirmation message in the pop-up window.
 9. Once complete, exit the pop-up window, save your Agent, and commit a new Version
