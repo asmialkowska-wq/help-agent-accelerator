@@ -207,29 +207,49 @@ The agent is now ready to use in your messaging channel (created in Step 2 below
 
 ### Step 2 — Create a Messaging Channel and Embedded Service Deployment
 
-1. Go to **App Launcher → Agentforce Studio → Agents → HAA Help Agent —> Click New Version**
-2. Go to **Explorer** (left side menu) → **Connections** → hover over Connections and click the **Plus sign** → **Add Connections** → Select **Enhanced Chat v2** and click **Add to Agent**
-3. Under **Enhanced Chat Channels**, click the button **New Channel** and fill out the details in the pop-up window:
-   - **Channel Name** — e.g. "Inline Agentforce Chat"
-   - **Developer Name** — auto-populated from Channel Name
-   - **Domain** — Enter the domain name for the entire site where your customers chat. For example, yourcompany.com
-   - **Fallback Queue** — Choose a queue to ensure the conversation is routed successfully if your agent is unavailable or is unable to connect. The queue you choose must have the Messaging Session object added as a supported object.
-4. Create the Routing Configuration by going to **Setup → search for Routing Configurations → New**. Fill in:
-   - **Name** — e.g. Messaging Routing Config
+> **Note:** Before you begin, ensure your website is already live on Salesforce Experience Cloud or your own server. Enter your exact website **domain** when prompted.
+> **Important:** If the **domain** doesn't match your site <span style="color: red;">**exactly**</span>, the connection will fail and a new Messaging Channel with new Embedded Service Deployment will have to be created with the correct **domain** name.
+
+#### 2.1. Create the Routing Configuration
+
+1. Go to **Setup → search for Routing Configurations → New**
+2. Fill in the following fields:
+   - **Name** — e.g. "Messaging Routing Config"
    - **Developer Name** — auto-filled
    - **Routing Priority** — (your choice)
    - **Routing Model** — (your choice)
    - **Units of Capacity** — (your choice)
+3. Click **Save**
 
-   Click **Save**
-5. Assign the Routing Configuration to the Fallback Queue:
-   - Open your **Fallback Queue**
-   - Set the **Routing Configuration** field to the one you just created
-   - Make sure **Messaging Session** is listed under **Supported Objects** — add it if not
-   - **Save**
-6. Click **Create Channel** — This process can take up to 10 minutes. Once the channel and deployment are created you will see a confirmation message in the pop-up window
-7. Exit the pop-up window, save your Agent, and commit a new Version
-8. Go to **Setup → Embedded Service Deployments → Your Deployment → Code Snippet** and note the following values — you'll need them in the next steps:
+#### 2.2. Assign the Routing Configuration to the Fallback Queue
+
+1. In **Setup**, search for and open your **Fallback Queue**
+2. Set the **Routing Configuration** field to the one you just created
+3. Make sure **Messaging Session** is listed under **Supported Objects** — add it if not present
+4. Click **Save**
+
+#### 2.3. Create the Messaging Channel
+
+1. Go to **App Launcher → Agentforce Studio → Agents → HAA Help Agent**
+2. Make sure your Agent is saved, then click **New Version**
+3. In the left side menu, click **Explorer**
+4. Navigate to **Connections** → hover over it and click the **Plus sign** → **Add Connections**
+5. Select **Enhanced Chat v2** and click **Add to Agent**
+6. Under **Enhanced Chat Channels**, click **New Channel**
+7. Fill out the details in the pop-up window:
+   - **Channel Name** — e.g. "Inline Agentforce Chat"
+   - **Developer Name** — auto-populated from Channel Name
+   - ****Domain** — Enter the domain name for the entire website that will include the chat (e.g., yourcompany.com)**
+   - **Fallback Queue** — Choose the queue you configured in step 2.2 above
+8. Click **Create Channel** — This process can take up to 10 minutes. Wait for the confirmation message in the pop-up window.
+9. Once complete, exit the pop-up window, save your Agent, and commit a new Version
+
+#### 2.4. Copy the Deployment Details
+
+1. Go to **Setup → Embedded Service Deployments**
+2. Open your newly created deployment
+3. Click **Code Snippet**
+4. Note the following values — you'll need them in Step 3:
 
 | Value | Where to find it |
 |-------|-------------------|
